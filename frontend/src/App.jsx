@@ -1,35 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import { Button, Card, CardContent, Typography } from "@mui/material";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
+        backgroundColor: "#f5f5f5",
+      }}
+    >
+      <Card sx={{ maxWidth: 400, p: 3, boxShadow: 3 }}>
+        <CardContent>
+          <Typography variant="h5" gutterBottom>
+            Welcome to Multi-Vendor Store
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            React + Material UI + Django Backend
+          </Typography>
+          <Button variant="contained" color="primary" sx={{ mt: 2 }}>
+            Get Started
+          </Button>
+        </CardContent>
+      </Card>
+    </div>
+  );
 }
 
-export default App
+export default App;
